@@ -1,10 +1,17 @@
 {
-[	:url <https://localinfo.jp/>;
-	a :SpammingWebsite].
+	[	:url <https://localinfo.jp/>;
+		a :SpammingWebsite].
+	
+	:SpammingWebsite rdfs:seeAlso https://en.wikipedia.org/wiki/Spamming.
+	
+	[	a :Project;
+		:name "brn";
+		<https://rdf.frdcsa.org/priorities/would_be_easier_with> [
+			a :Project;
+			:name "brn";
+			rdfs:comment "structure-aware editor, metadata-aware editor";
+			:url <https://github.com/koo5/understand_humans/tree/master/mrkev/svelte/2/my-app>]
+	]
+} rdfs:comment "the facts in this graph need some editing, namely, some SameAs interlinkage or directly replacing some local terms with those in standard ontologies would be useful".
 
-:SpammingWebsite rdfs:seeAlso https://en.wikipedia.org/wiki/Spamming.
-
-[	a :Project;
-	:name 
-	<https://rdf.frdcsa.org/priorities/would_be_easier_with> 
 
