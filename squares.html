@@ -10,10 +10,11 @@ var w = 33,h = 33;
 
 function ccc(){
 	console.log("click")
-	x = this.getContext('2d')
-	x.magic = !x.magic;
+	context = this.getContext('2d')
+	context.magic = !context.magic;
 	console.log("click")
-	console.log(x.magic)
+	console.log(context.magic)
+
 
 }
 
@@ -33,10 +34,13 @@ function generate_table() {
       cell.addEventListener('contextmenu', function(ev) {
 //      console.log(ev)
         ev.preventDefault();
-        canvas = ev.path[0].getContext('2d')
-        canvas.magic = 0
-        canvas.fillStyle='rgb(255,255,255)';
-        canvas.fillRect(0, 0, w, h);
+        context = ev.path[0].getContext('2d')
+        context.magic = 0
+        context.fillStyle='rgb(255,255,255)';
+        context.fillRect(0, 0, w, h);
+        context.cycle_count = 1;
+        context.cycle_counter = 255;
+        context.LED_pwm = new Array(255,0,0);
         return false;
       }, false);
       
@@ -85,7 +89,7 @@ switch (banana.cycle_count)
   case 3:
     var incColor = 0;
     var decColor = 2;
-    varnoColor = 1;
+    var noColor = 1;
     break;
 }
 
