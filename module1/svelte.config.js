@@ -20,8 +20,7 @@ const config = {
 			precompress: false,
 			strict: false,
 			paths: {
-				base: '/module1/build',
-				assets: '/module1/build'
+				base: '/module1/build'
 			}
 		})
 	}
