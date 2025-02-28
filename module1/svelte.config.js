@@ -18,7 +18,11 @@ const config = {
 			assets: 'build',
 			fallback: undefined,
 			precompress: false,
-			strict: false
+			strict: false,
+			paths: {
+				base: '/module1/build',
+				assets: '/module1/build'
+			}
 		})
 	}
 };
